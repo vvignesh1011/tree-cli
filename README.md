@@ -1,5 +1,5 @@
 #install the package
-npm i github:https://github.com/vvignesh1011/tree-cli.git
+npm i github:vvignesh1011/tree-cli.git
 
 #run the package
 tree-cli
