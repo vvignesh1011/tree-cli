@@ -1,0 +1,13 @@
+tree-cli
+ |-.gitignore
+ |-out.txt
+ |-package-lock.json
+ |-package.json
+ |-README.md
+ |-src
+ | |-folderUtil.ts
+ | |-postbuild.ts
+ | |-printFolder.ts
+ | |-tree.ts
+ |-structure.txt
+ |-tsconfig.json

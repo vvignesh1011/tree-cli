@@ -8,15 +8,15 @@ class NodeElement {
         this.removeChild = (ele) => {
             this.children = this.children.filter((item) => item != ele);
         };
-        this.print = (depth = 1) => {
+        this.getStructure = (callBack, depth = 1) => {
             if (depth == 1)
-                console.log(this.val);
+                callBack === null || callBack === void 0 ? void 0 : callBack(this.val);
             this.children.forEach((child) => {
-                console.log(Array(depth)
+                callBack === null || callBack === void 0 ? void 0 : callBack(Array(depth)
                     .fill("")
                     .map((_) => ` |`)
                     .join("") + `-${child.val}`);
-                child.print(depth + 1);
+                child.getStructure(callBack, depth + 1);
             });
         };
         this.children = [];

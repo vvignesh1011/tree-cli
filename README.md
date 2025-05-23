@@ -12,3 +12,7 @@ example tree-cli --root ./src
 # omit folders for print using -o / --omit
 
 example tree-cli --omit ./dist ./node_modules
+
+# print on file using --out
+
+example tree-cli --out ./output.txt

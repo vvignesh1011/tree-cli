@@ -15,16 +15,16 @@ class NodeElement {
     this.children = this.children.filter((item) => item != ele);
   };
 
-  print = (depth = 1) => {
-    if (depth == 1) console.log(this.val);
+  getStructure = (callBack?: (val: string) => void, depth = 1) => {
+    if (depth == 1) callBack?.(this.val);
     this.children.forEach((child) => {
-      console.log(
+      callBack?.(
         Array(depth)
           .fill("")
           .map((_) => ` |`)
           .join("") + `-${child.val}`
       );
-      child.print(depth + 1);
+      child.getStructure(callBack, depth + 1);
     });
   };
 }
